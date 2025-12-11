@@ -9,3 +9,13 @@ const inter = Inter({
 });
 
 const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "AIPentest",
+  description: "AI automated penetration testing",
+};
+
