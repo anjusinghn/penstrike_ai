@@ -10,3 +10,15 @@ function getModel() {
   const modelId = process.env.AI_MODEL ?? "claude-sonnet-4-20250514";
 
   if (provider === "openai") return openai(modelId);
+  return anthropic(modelId);
+}
+
+export async function POST(req: Request) {
+  const body = await req.json();
+  const target: string = body.target;
+  const scope: string = body.scope ?? target;
+  const agent: "cyberstrike" | "web-application" = body.agent ?? "cyberstrike";
+
+  if (!target) {
+    return new Response(JSON.stringify({ error: "target is required" }), {
+      status: 400,
