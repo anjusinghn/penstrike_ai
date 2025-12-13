@@ -9,3 +9,14 @@ export type Finding = {
   affected_url: string;
   evidence: string;
   reproduction_steps: string;
+  remediation: string;
+  cvss_score?: number;
+  cwe_id?: string;
+  timestamp: number;
+};
+
+export type Scan = {
+  id: string;
+  target: string;
+  scope: string;
+  agent: "cyberstrike" | "web-application";
