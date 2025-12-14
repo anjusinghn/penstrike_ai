@@ -19,3 +19,13 @@ export const metadata: Metadata = {
   description: "AI automated penetration testing",
 };
 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <body
+        style={{
+          backgroundColor: "var(--bg)",
