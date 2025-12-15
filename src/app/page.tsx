@@ -24,3 +24,16 @@ export type Finding = {
   cvss_score?: number;
   cwe_id?: string;
 };
+
+function uid() {
+  return Math.random().toString(36).slice(2, 9);
+}
+
+export default function Home() {
+  const [items, setItems] = useState<OutputItem[]>([]);
+  const [findings, setFindings] = useState<Finding[]>([]);
+  const [isRunning, setIsRunning] = useState(false);
+  const [scanId, setScanId] = useState<string | null>(null);
+
+  const startScan = useCallback(
+    async (target: string, scope: string, agent: string) => {
