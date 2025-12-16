@@ -22,3 +22,14 @@ export async function POST(req: Request) {
   if (!target) {
     return new Response(JSON.stringify({ error: "target is required" }), {
       status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  const scan = createScan({ target, scope, agent });
+  const system = buildSystemPrompt(agent);
+  const tools = createTools(scope);
+
+  const result = streamText({
+    model: getModel(),
+    system,
