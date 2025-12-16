@@ -24,3 +24,15 @@ const inputStyle = {
 
 const labelStyle = {
   display: "block",
+  fontFamily: "var(--font-jetbrains), monospace",
+  color: "var(--muted)",
+  fontSize: "10px",
+  letterSpacing: "0.1em",
+  textTransform: "uppercase" as const,
+  marginBottom: "6px",
+};
+
+export default function ScanForm({ onScan, isRunning }: Props) {
+  const [target, setTarget] = useState("");
+  const [scope, setScope] = useState("");
+  const [agent, setAgent] = useState<Agent>("cyberstrike");
