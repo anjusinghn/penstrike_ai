@@ -20,3 +20,14 @@ export type Scan = {
   target: string;
   scope: string;
   agent: "cyberstrike" | "web-application";
+  status: ScanStatus;
+  findings: Finding[];
+  started_at: number;
+  completed_at?: number;
+};
+
+const scans = new Map<string, Scan>();
+
+export function createScan(input: {
+  target: string;
+  scope: string;
