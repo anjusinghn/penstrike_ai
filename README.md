@@ -20,3 +20,14 @@ npm install
 cp .env.example apps/api/.env
 # Edit apps/api/.env and add your ANTHROPIC_API_KEY
 
+npm run dev
+```
+
+Open http://localhost:3000 and enter a target URL to begin scanning.
+
+## Usage
+
+1. Enter target URL (e.g., `https://example.com`)
+2. Select agent:
+   - **CyberStrike**: Full-spectrum security testing
+   - **Web Application**: OWASP-focused web testing
