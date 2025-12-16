@@ -22,3 +22,15 @@ export type Scan = {
   agent: "cyberstrike" | "web-application";
   status: ScanStatus;
   findings: Finding[];
+  started_at: number;
+  completed_at?: number;
+};
+
+const scans = new Map<string, Scan>();
+
+export function createScan(input: {
+  target: string;
+  scope: string;
+  agent: "cyberstrike" | "web-application";
+}): Scan {
+  const id = `scan_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 6)}`;
