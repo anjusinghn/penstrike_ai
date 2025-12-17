@@ -22,3 +22,15 @@ function run(
 }
 
 export function createTools(scope: string) {
+  void scope;
+  return {
+    execute_command: tool({
+      description: `Execute a shell command on the server. Use for running security tools like nmap, curl, nikto, nuclei, gobuster, dig, whois, openssl, whatweb, subfinder, httpx, etc. Output is truncated to 10KB. Timeout: 60 seconds.`,
+      parameters: z.object({
+        command: z.string().describe("The shell command to execute"),
+        timeout: z
+          .number()
+          .optional()
+          .describe("Timeout in ms (default 30000, max 120000)"),
+      }),
+      execute: async ({ command, timeout }) => {
