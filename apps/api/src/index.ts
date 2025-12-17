@@ -12,3 +12,10 @@ app.use(
     exposedHeaders: ["X-Scan-ID"],
   }),
 );
+
+app.use(express.json());
+app.use("/scan", scanRouter);
+
+app.listen(port, () => {
+  console.log(`api running on :${port}`);
+});
