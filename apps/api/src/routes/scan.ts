@@ -19,3 +19,13 @@ function getModel() {
 scanRouter.post("/", async (req, res) => {
   const target: string = req.body.target;
   const scope: string = req.body.scope ?? target;
+  const agent: "cyberstrike" | "web-application" =
+    req.body.agent ?? "cyberstrike";
+
+  if (!target) {
+    res.status(400).json({ error: "target is required" });
+    return;
+  }
+
+  const scan = createScan({ target, scope, agent });
+
