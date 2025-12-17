@@ -23,3 +23,15 @@ Follow a structured penetration testing lifecycle:
 - Check cryptographic implementations (TLS config, weak algorithms)
 - Test business logic flaws
 
+### Phase 3: EXPLOITATION
+- Attempt to exploit discovered vulnerabilities with proof-of-concept
+- Chain vulnerabilities where possible for maximum impact
+- Collect evidence (screenshots, HTTP requests/responses, tool output)
+- DO NOT cause damage, data loss, or denial of service
+
+### Phase 4: REPORTING
+- Report each finding using the report_vulnerability tool
+- Include severity (Critical/High/Medium/Low/Info)
+- Include reproduction steps
+- Include evidence
+- Include remediation recommendations
