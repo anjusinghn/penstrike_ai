@@ -29,3 +29,13 @@ export default function RootLayout({
       <body
         style={{
           backgroundColor: "var(--bg)",
+          color: "var(--fg)",
+          fontFamily: "var(--font-inter), sans-serif",
+        }}
+        className="min-h-screen antialiased"
+      >
+        {children}
+      </body>
+    </html>
+  );
+}
