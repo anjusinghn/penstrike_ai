@@ -36,3 +36,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
   const [target, setTarget] = useState("");
   const [scope, setScope] = useState("");
   const [agent, setAgent] = useState<Agent>("cyberstrike");
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!target.trim() || isRunning) return;
+    onScan(target.trim(), scope.trim(), agent);
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        backgroundColor: "var(--surface)",
+        border: "1px solid var(--border)",
