@@ -37,3 +37,15 @@ function ToolCallBlock({ item }: { item: OutputItem }) {
 
   return (
     <div
+      style={{
+        margin: "10px 0",
+        borderLeft: `2px solid ${isReportVuln ? "#ff8c00" : "#4a9eff"}`,
+        paddingLeft: "12px",
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "var(--font-jetbrains), monospace",
+          color: isReportVuln ? "#ff8c00" : "#4a9eff",
+          fontSize: "10px",
+          letterSpacing: "0.08em",
