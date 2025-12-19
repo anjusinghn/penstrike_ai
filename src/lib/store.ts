@@ -31,3 +31,14 @@ const scans = new Map<string, Scan>();
 export function createScan(input: {
   target: string;
   scope: string;
+  agent: "cyberstrike" | "web-application";
+}): Scan {
+  const id = `scan_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 6)}`;
+  const scan: Scan = {
+    id,
+    target: input.target,
+    scope: input.scope,
+    agent: input.agent,
+    status: "running",
+    findings: [],
+    started_at: Date.now(),
