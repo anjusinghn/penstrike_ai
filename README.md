@@ -31,3 +31,13 @@ Open http://localhost:3000 and enter a target URL to begin scanning.
 2. Select agent:
    - **CyberStrike**: Full-spectrum security testing
    - **Web Application**: OWASP-focused web testing
+3. Click "Launch Scan"
+4. Watch findings appear in real-time
+
+## Security Notice
+
+**For authorized testing only.** Always have explicit permission before scanning any target.
+
+## License
+
+MIT
