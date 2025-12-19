@@ -37,3 +37,16 @@ export default function Home() {
 
   const startScan = useCallback(
     async (target: string, scope: string, agent: string) => {
+      setIsRunning(true);
+      setItems([]);
+      setFindings([]);
+      setScanId(null);
+
+      const toolCallNames: Record<string, string> = {};
+      let currentTextId: string | null = null;
+
+      try {
+        const resp = await fetch("/api/scan", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ target, scope: scope || target, agent }),

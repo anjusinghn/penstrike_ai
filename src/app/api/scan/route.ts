@@ -33,3 +33,15 @@ export async function POST(req: Request) {
   const result = streamText({
     model: getModel(),
     system,
+    tools,
+    maxSteps: 75,
+    messages: [
+      {
+        role: "user",
+        content: `## TARGET
+${target}
+
+## SCOPE
+${scope}
+
+## INSTRUCTIONS
