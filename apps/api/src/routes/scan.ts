@@ -29,3 +29,13 @@ scanRouter.post("/", async (req, res) => {
 
   const scan = createScan({ target, scope, agent });
 
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  res.setHeader("Transfer-Encoding", "chunked");
+  res.setHeader("X-Scan-ID", scan.id);
+  res.setHeader("Cache-Control", "no-cache");
+  res.setHeader("X-Accel-Buffering", "no");
+
+  const result = streamText({
+    model: getModel(),
+    system: buildSystemPrompt(agent),
+    tools: createTools(scope),
