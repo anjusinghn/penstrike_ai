@@ -35,3 +35,15 @@ export function createTools(scope: string) {
       execute: async ({ command, timeout }) => {
         const ms = Math.min(timeout ?? 30000, 120000);
         console.log(`[TOOL] execute_command: ${command}`);
+        const result = await run(command, ms);
+        return {
+          stdout: result.stdout || "(no output)",
+          stderr: result.stderr || "",
+          exit_code: result.exitCode,
+        };
+      },
+    }),
+
+    http_request: tool({
+      description: `Make an HTTP request to a URL. Use this for targeted security testing — injections, auth bypass, header manipulation, etc. Supports all HTTP methods and custom headers/body.`,
+      parameters: z.object({
