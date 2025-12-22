@@ -45,3 +45,14 @@ ${target}
 ${scope}
 
 ## INSTRUCTIONS
+Begin the authorized penetration test now. Start with reconnaissance of the target, then systematically test for vulnerabilities following OWASP WSTG methodology. Report every finding using the report_vulnerability tool. Be thorough and autonomous — complete the full assessment without waiting for further instructions.`,
+      },
+    ],
+  });
+
+  return result.toDataStreamResponse({
+    headers: {
+      "X-Scan-ID": scan.id,
+    },
+  });
+}
