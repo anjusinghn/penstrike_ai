@@ -50,3 +50,15 @@ function ToolCallBlock({ item }: { item: OutputItem }) {
           letterSpacing: "0.08em",
           textTransform: "uppercase",
           marginBottom: "4px",
+          display: "flex",
+          alignItems: "center",
+          gap: "6px",
+        }}
+      >
+        <span style={{ opacity: 0.6 }}>&gt;</span>
+        {item.label}
+      </div>
+      <pre
+        style={{
+          fontFamily: "var(--font-jetbrains), monospace",
+          color: "var(--muted)",
