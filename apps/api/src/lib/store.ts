@@ -46,3 +46,14 @@ export function createScan(input: {
   scans.set(id, scan);
   return scan;
 }
+
+export function getScan(id: string) {
+  return scans.get(id);
+}
+
+export function completeScan(scanId: string) {
+  const scan = scans.get(scanId);
+  if (!scan) return;
+  scan.status = "completed";
+  scan.completed_at = Date.now();
+}
