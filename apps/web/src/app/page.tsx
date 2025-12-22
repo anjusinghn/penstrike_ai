@@ -37,3 +37,16 @@ export default function Home() {
   const [isRunning, setIsRunning] = useState(false);
   const [scanId, setScanId] = useState<string | null>(null);
 
+  const startScan = useCallback(
+    async (target: string, scope: string, agent: string) => {
+      setIsRunning(true);
+      setItems([]);
+      setFindings([]);
+      setScanId(null);
+
+      const toolCallNames: Record<string, string> = {};
+      let currentTextId: string | null = null;
+
+      try {
+        const resp = await fetch(`${API_URL}/scan`, {
+          method: "POST",
