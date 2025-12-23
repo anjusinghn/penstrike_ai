@@ -47,3 +47,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
 
   return (
     <form
+      onSubmit={handleSubmit}
+      style={{
+        backgroundColor: "var(--surface)",
+        border: "1px solid var(--border)",
+        borderRadius: "6px",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          padding: "12px 16px",
+          borderBottom: "1px solid var(--border)",

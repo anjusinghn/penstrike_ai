@@ -39,3 +39,13 @@ scanRouter.post("/", async (req, res) => {
     model: getModel(),
     system: buildSystemPrompt(agent),
     tools: createTools(scope),
+    maxSteps: 75,
+    messages: [
+      {
+        role: "user",
+        content: `## TARGET\n${target}\n\n## SCOPE\n${scope}\n\n## INSTRUCTIONS\nBegin the authorized penetration test now. Start with reconnaissance of the target, then systematically test for vulnerabilities following OWASP WSTG methodology. Report every finding using the report_vulnerability tool. Be thorough and autonomous — complete the full assessment without waiting for further instructions.`,
+      },
+    ],
+  });
+
+  try {
