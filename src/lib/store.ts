@@ -42,3 +42,14 @@ export function createScan(input: {
     status: "running",
     findings: [],
     started_at: Date.now(),
+  };
+  scans.set(id, scan);
+  return scan;
+}
+
+export function getScan(id: string) {
+  return scans.get(id);
+}
+
+export function addFinding(scanId: string, finding: Finding) {
+  const scan = scans.get(scanId);
