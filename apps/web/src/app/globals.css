@@ -43,3 +43,15 @@ html {
   background: #2a2a2a;
   border-radius: 2px;
 }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 1px rgba(0, 255, 65, 0.15);
+}
