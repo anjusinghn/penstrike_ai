@@ -46,3 +46,15 @@ export function createTools(scope: string) {
     }),
 
     http_request: tool({
+      description: `Make an HTTP request to a URL for targeted security testing — injections, auth bypass, header manipulation, etc.`,
+      parameters: z.object({
+        url: z.string().describe("Full URL to request"),
+        method: z
+          .enum(["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"])
+          .default("GET"),
+        headers: z
+          .record(z.string())
+          .optional()
+          .describe("Custom HTTP headers"),
+        body: z
+          .string()
