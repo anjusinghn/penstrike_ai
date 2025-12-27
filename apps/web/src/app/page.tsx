@@ -50,3 +50,15 @@ export default function Home() {
       try {
         const resp = await fetch(`${API_URL}/scan`, {
           method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ target, scope: scope || target, agent }),
+        });
+
+        const sid = resp.headers.get("x-scan-id");
+        if (sid) setScanId(sid);
+
+        if (!resp.ok || !resp.body) {
+          const errText = await resp.text().catch(() => resp.statusText);
+          setItems([
+            {
+              id: uid(),
