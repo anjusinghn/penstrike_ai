@@ -53,3 +53,13 @@ export function getScan(id: string) {
 
 export function addFinding(scanId: string, finding: Finding) {
   const scan = scans.get(scanId);
+  if (!scan) return;
+  scan.findings.push(finding);
+}
+
+export function completeScan(scanId: string) {
+  const scan = scans.get(scanId);
+  if (!scan) return;
+  scan.status = "completed";
+  scan.completed_at = Date.now();
+}
