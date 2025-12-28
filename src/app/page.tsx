@@ -63,3 +63,15 @@ export default function Home() {
               type: "error",
               content: `HTTP ${resp.status}: ${errText}`,
             },
+          ]);
+          return;
+        }
+
+        const reader = resp.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
