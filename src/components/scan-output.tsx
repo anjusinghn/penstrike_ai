@@ -62,3 +62,16 @@ function ToolCallBlock({ item }: { item: OutputItem }) {
       <pre
         style={{
           fontFamily: "var(--font-jetbrains), monospace",
+          color: "var(--muted)",
+          fontSize: "11px",
+          whiteSpace: "pre-wrap",
+          wordBreak: "break-all",
+          margin: 0,
+          lineHeight: "1.5",
+          maxHeight: "200px",
+          overflowY: "auto",
+        }}
+      >
+        {typeof parsed === "object"
+          ? JSON.stringify(parsed, null, 2)
+          : String(parsed)}
