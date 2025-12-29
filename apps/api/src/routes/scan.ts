@@ -49,3 +49,13 @@ scanRouter.post("/", async (req, res) => {
   });
 
   try {
+    const dataStream = result.toDataStream();
+    const nodeStream = Readable.fromWeb(
+      dataStream as Parameters<typeof Readable.fromWeb>[0],
+    );
+    nodeStream.pipe(res);
+    nodeStream.on("error", () => res.end());
+  } catch {
+    res.end();
+  }
+});
