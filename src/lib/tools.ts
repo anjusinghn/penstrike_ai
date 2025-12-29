@@ -59,3 +59,15 @@ export function createTools(scope: string) {
           .string()
           .optional()
           .describe("Request body (for POST/PUT/PATCH)"),
+        follow_redirects: z.boolean().optional().default(true),
+      }),
+      execute: async ({ url, method, headers, body, follow_redirects }) => {
+        console.log(`[TOOL] http_request: ${method} ${url}`);
+        try {
+          const controller = new AbortController();
+          const timer = setTimeout(() => controller.abort(), 15000);
+
+          const resp = await fetch(url, {
+            method,
+            headers: headers ?? {},
+            body: body ?? undefined,
