@@ -62,3 +62,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
           justifyContent: "space-between",
         }}
       >
+        <span
+          style={{
+            fontFamily: "var(--font-jetbrains), monospace",
+            color: "var(--accent)",
+            fontSize: "10px",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+          }}
+        >
+          Scan Configuration
+        </span>
+        <span
