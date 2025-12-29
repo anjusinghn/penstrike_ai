@@ -60,3 +60,15 @@ Structure your output as:
 - Port scanning: nmap -sV -sC -T4 <target>
 - Directory bruteforce: gobuster dir -u <url> -w /usr/share/wordlists/dirb/common.txt
 - Web vuln scanning: nikto -h <url>
+- SSL/TLS testing: testssl.sh <url> or nmap --script ssl-enum-ciphers
+- HTTP probing: curl -v -I <url>
+- Technology detection: whatweb <url> or wappalyzer
+- Subdomain enum: subfinder -d <domain> or dig <domain>
+- Header analysis: curl -s -D- <url> -o /dev/null
+`;
+
+export const WEB_APPLICATION_PROMPT = `You are a web application security specialist following OWASP Web Security Testing Guide (WSTG) v4.2 methodology.
+
+## YOUR EXPERTISE
+You are an expert in:
+- OWASP Top 10 vulnerabilities
