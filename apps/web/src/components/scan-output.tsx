@@ -75,3 +75,16 @@ function ToolCallBlock({ item }: { item: OutputItem }) {
           ? JSON.stringify(parsed, null, 2)
           : String(parsed)}
       </pre>
+    </div>
+  );
+}
+
+function ToolResultBlock({ item }: { item: OutputItem }) {
+  if (item.label === "report_vulnerability") return null;
+  let parsed: unknown = null;
+  try {
+    parsed = JSON.parse(item.content);
+  } catch {
+    parsed = item.content;
+  }
+
