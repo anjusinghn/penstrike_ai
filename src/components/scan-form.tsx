@@ -59,3 +59,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
         style={{
           padding: "12px 16px",
           borderBottom: "1px solid var(--border)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "var(--font-jetbrains), monospace",
+            color: "var(--accent)",
+            fontSize: "10px",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
