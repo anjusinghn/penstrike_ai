@@ -71,3 +71,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
             fontSize: "10px",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
+          }}
+        >
+          Scan Configuration
+        </span>
+        <span
+          style={{
+            width: "6px",
+            height: "6px",
+            borderRadius: "50%",
+            backgroundColor: isRunning ? "var(--accent)" : "var(--border)",
+            display: "inline-block",
+            transition: "background-color 0.3s",
