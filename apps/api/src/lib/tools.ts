@@ -69,3 +69,15 @@ export function createTools(scope: string) {
           const timer = setTimeout(() => controller.abort(), 15000);
           const resp = await fetch(url, {
             method,
+            headers: headers ?? {},
+            body: body ?? undefined,
+            redirect: follow_redirects ? "follow" : "manual",
+            signal: controller.signal,
+          });
+          clearTimeout(timer);
+          const respHeaders: Record<string, string> = {};
+          resp.headers.forEach((v, k) => {
+            respHeaders[k] = v;
+          });
+          const text = await resp.text();
+          return {
