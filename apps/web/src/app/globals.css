@@ -66,3 +66,14 @@ select:focus {
     opacity: 0;
   }
 }
+
+@keyframes pulse-accent {
+  0%,
+  100% {
+    box-shadow: 0 0 6px rgba(0, 255, 65, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(0, 255, 65, 0.5);
+  }
+}
+
