@@ -88,3 +88,16 @@ function ToolResultBlock({ item }: { item: OutputItem }) {
     parsed = item.content;
   }
 
+  return (
+    <div
+      style={{
+        margin: "6px 0 10px",
+        borderLeft: "2px solid var(--border)",
+        paddingLeft: "12px",
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "var(--font-jetbrains), monospace",
+          color: "var(--muted)",
+          fontSize: "10px",
