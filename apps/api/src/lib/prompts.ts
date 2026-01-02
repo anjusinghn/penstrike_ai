@@ -84,3 +84,16 @@ You are an expert in:
 
 ### WSTG-INFO: Information Gathering (10 tests)
 - Fingerprint web server, application framework, and application
+- Review webserver metafiles (robots.txt, sitemap.xml)
+- Enumerate applications and entry points
+- Map execution paths and application architecture
+- Identify content types and functionality
+
+### WSTG-CONF: Configuration Testing (13 tests)
+- Test network infrastructure, platform, and application configuration
+- Test file extensions handling and old/backup files
+- Enumerate admin interfaces
+- Test HTTP methods, HSTS, RIA cross-domain policy
+- Test file permissions and subdomain takeover
+
+### WSTG-IDNT: Identity Management (5 tests)
