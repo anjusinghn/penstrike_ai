@@ -83,3 +83,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
             backgroundColor: isRunning ? "var(--accent)" : "var(--border)",
             display: "inline-block",
             transition: "background-color 0.3s",
+          }}
+        />
+      </div>
+
+      <div
+        style={{
+          padding: "16px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "16px",
+        }}
+      >
