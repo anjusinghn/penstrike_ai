@@ -87,3 +87,16 @@ function ToolResultBlock({ item }: { item: OutputItem }) {
   try {
     parsed = JSON.parse(item.content);
   } catch {
+    parsed = item.content;
+  }
+
+  return (
+    <div
+      style={{
+        margin: "6px 0 10px",
+        borderLeft: "2px solid var(--border)",
+        paddingLeft: "12px",
+      }}
+    >
+      <div
+        style={{
