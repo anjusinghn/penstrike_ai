@@ -87,3 +87,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
 
       <div
         style={{
+          padding: "16px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "16px",
+        }}
+      >
+        <div>
+          <label style={labelStyle} htmlFor="target">
+            Target URL
+          </label>
+          <input
+            id="target"
+            type="text"
