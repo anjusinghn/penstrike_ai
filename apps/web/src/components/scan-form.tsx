@@ -100,3 +100,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
           <input
             id="target"
             type="text"
+            value={target}
+            onChange={(e) => setTarget(e.target.value)}
+            placeholder="https://example.com"
+            required
+            disabled={isRunning}
+            autoComplete="off"
+            spellCheck={false}
+            style={{
+              ...inputStyle,
+              opacity: isRunning ? 0.5 : 1,
+              cursor: isRunning ? "not-allowed" : "text",
+            }}

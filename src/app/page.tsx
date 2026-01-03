@@ -101,3 +101,16 @@ export default function Home() {
                     ),
                   );
                 } else {
+                  const newId = uid();
+                  currentTextId = newId;
+                  setItems((prev) => [
+                    ...prev,
+                    { id: newId, type: "text", content: chunk },
+                  ]);
+                }
+              } else if (prefix === "9") {
+                const tc = JSON.parse(rest) as {
+                  toolCallId: string;
+                  toolName: string;
+                  args: unknown;
+                };
