@@ -88,3 +88,16 @@ export default function Home() {
             const colonIdx = trimmed.indexOf(":");
             if (colonIdx === -1) continue;
 
+            const prefix = trimmed.slice(0, colonIdx);
+            const rest = trimmed.slice(colonIdx + 1);
+
+            try {
+              if (prefix === "0") {
+                const chunk: string = JSON.parse(rest);
+                if (currentTextId) {
+                  setItems((prev) =>
+                    prev.map((item) =>
+                      item.id === currentTextId
+                        ? { ...item, content: item.content + chunk }
+                        : item,
+                    ),
