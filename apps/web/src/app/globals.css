@@ -77,3 +77,14 @@ select:focus {
   }
 }
 
+.terminal-cursor::after {
+  content: "\2588";
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+  margin-left: 1px;
+  font-size: 0.9em;
+}
+
+.accent-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.55);
+}

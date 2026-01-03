@@ -81,3 +81,15 @@ export function createTools(scope: string) {
           });
           const text = await resp.text();
           return {
+            status: resp.status,
+            status_text: resp.statusText,
+            headers: respHeaders,
+            body: text.slice(0, 8000),
+            body_length: text.length,
+            redirected: resp.redirected,
+            final_url: resp.url,
+          };
+        } catch (err) {
+          return {
+            error: err instanceof Error ? err.message : "Request failed",
+            status: 0,
