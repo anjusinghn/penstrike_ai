@@ -96,3 +96,15 @@ export function createTools(scope: string) {
         } catch (err) {
           return {
             error: err instanceof Error ? err.message : "Request failed",
+            status: 0,
+          };
+        }
+      },
+    }),
+
+    report_vulnerability: tool({
+      description: `Report a discovered security vulnerability. Use this every time you find a security issue, no matter the severity. Include full details for the report.`,
+      parameters: z.object({
+        title: z.string().describe("Short vulnerability title"),
+        severity: z
+          .enum(["critical", "high", "medium", "low", "info"])
