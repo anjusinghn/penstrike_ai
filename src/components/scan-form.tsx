@@ -95,3 +95,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
           gap: "16px",
         }}
       >
+        <div>
+          <label style={labelStyle} htmlFor="target">
+            Target URL
+          </label>
+          <input
+            id="target"
+            type="text"
+            value={target}
+            onChange={(e) => setTarget(e.target.value)}
+            placeholder="https://example.com"
+            required
+            disabled={disabled}
