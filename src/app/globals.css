@@ -87,3 +87,14 @@ select:focus {
 
 .accent-glow {
   text-shadow: 0 0 10px rgba(0, 255, 65, 0.55);
+}
+
+.panel-glow {
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 0 20px rgba(0, 255, 65, 0.03);
+}
+
+.running-border {
+  animation: pulse-accent 2s ease-in-out infinite;
+}
