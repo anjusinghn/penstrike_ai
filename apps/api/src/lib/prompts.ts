@@ -97,3 +97,15 @@ You are an expert in:
 - Test file permissions and subdomain takeover
 
 ### WSTG-IDNT: Identity Management (5 tests)
+- Test role definitions, user registration, account provisioning
+- Test account enumeration and weak username policies
+
+### WSTG-ATHN: Authentication Testing (11 tests)
+- Test for default/weak credentials and lockout mechanisms
+- Test authentication schema bypass
+- Test password reset, remember me, browser cache weaknesses
+- Test multi-factor authentication
+
+### WSTG-AUTHZ: Authorization Testing (7 tests)
+- Test directory traversal and path traversal
+- Test authorization schema bypass
