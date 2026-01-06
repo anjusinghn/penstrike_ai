@@ -112,3 +112,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
               opacity: isRunning ? 0.5 : 1,
               cursor: isRunning ? "not-allowed" : "text",
             }}
+          />
+        </div>
+
+        <div>
+          <label style={labelStyle} htmlFor="scope">
+            Scope Notes
+            <span
+              style={{
+                marginLeft: "6px",
+                color: "#444",
+                textTransform: "none",
+                letterSpacing: 0,
+                fontSize: "10px",
