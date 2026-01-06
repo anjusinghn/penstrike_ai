@@ -114,3 +114,15 @@ export default function Home() {
                 const tc = JSON.parse(rest) as {
                   toolCallId: string;
                   toolName: string;
+                  args: unknown;
+                };
+                toolCallNames[tc.toolCallId] = tc.toolName;
+                currentTextId = null;
+                setItems((prev) => [
+                  ...prev,
+                  {
+                    id: uid(),
+                    type: "tool_call",
+                    label: tc.toolName,
+                    content: JSON.stringify(tc.args, null, 2),
+                  },
