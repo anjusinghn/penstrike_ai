@@ -113,3 +113,15 @@ function ToolResultBlock({ item }: { item: OutputItem }) {
       >
         <span style={{ opacity: 0.5 }}>&#8629;</span>
         {item.label} result
+      </div>
+      <pre
+        style={{
+          fontFamily: "var(--font-jetbrains), monospace",
+          color: "#555",
+          fontSize: "11px",
+          whiteSpace: "pre-wrap",
+          wordBreak: "break-all",
+          margin: 0,
+          lineHeight: "1.5",
+          maxHeight: "160px",
+          overflowY: "auto",
