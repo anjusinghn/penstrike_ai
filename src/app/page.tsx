@@ -114,3 +114,16 @@ export default function Home() {
                   toolName: string;
                   args: unknown;
                 };
+                toolCallNames[tc.toolCallId] = tc.toolName;
+                currentTextId = null;
+                setItems((prev) => [
+                  ...prev,
+                  {
+                    id: uid(),
+                    type: "tool_call",
+                    label: tc.toolName,
+                    content: JSON.stringify(tc.args, null, 2),
+                  },
+                ]);
+              } else if (prefix === "a") {
+                const tr = JSON.parse(rest) as {
