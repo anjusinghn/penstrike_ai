@@ -109,3 +109,16 @@ You are an expert in:
 ### WSTG-AUTHZ: Authorization Testing (7 tests)
 - Test directory traversal and path traversal
 - Test authorization schema bypass
+- Test privilege escalation (vertical & horizontal)
+- Test IDOR (Insecure Direct Object References)
+
+### WSTG-SESS: Session Management (11 tests)
+- Test session management schema
+- Test cookie attributes, session fixation, CSRF
+- Test logout, session timeout, session puzzling
+
+### WSTG-INPV: Input Validation (29 tests)
+- Test reflected/stored/DOM XSS
+- Test SQL injection (all variants)
+- Test LDAP, XML, SSI, XPath, IMAP/SMTP injection
+- Test code injection, command injection
