@@ -105,3 +105,15 @@ export function createTools(scope: string) {
         severity: z
           .enum(["critical", "high", "medium", "low", "info"])
           .describe("Severity rating"),
+        category: z
+          .string()
+          .describe("OWASP/WSTG category (e.g., WSTG-INPV-01, XSS, SQLi)"),
+        description: z
+          .string()
+          .describe("Detailed description of the vulnerability"),
+        affected_url: z.string().describe("The affected URL or endpoint"),
+        evidence: z
+          .string()
+          .describe(
+            "Proof — HTTP request/response, tool output, or payload used",
+          ),
