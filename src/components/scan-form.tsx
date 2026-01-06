@@ -107,3 +107,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
             placeholder="https://example.com"
             required
             disabled={disabled}
+            autoComplete="off"
+            spellCheck={false}
+            style={{
+              ...inputStyle,
+              opacity: disabled ? 0.5 : 1,
+              cursor: disabled ? "not-allowed" : "text",
+            }}
+          />
+        </div>
+
+        <div>
+          <label style={labelStyle} htmlFor="scope">
+            Scope Notes
