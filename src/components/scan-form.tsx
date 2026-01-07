@@ -120,3 +120,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
         <div>
           <label style={labelStyle} htmlFor="scope">
             Scope Notes
+            <span
+              style={{
+                marginLeft: "6px",
+                color: "#444",
+                textTransform: "none",
+                letterSpacing: 0,
+                fontSize: "10px",
+              }}
+            >
+              optional
+            </span>
+          </label>
