@@ -121,3 +121,16 @@ You are an expert in:
 - Test reflected/stored/DOM XSS
 - Test SQL injection (all variants)
 - Test LDAP, XML, SSI, XPath, IMAP/SMTP injection
+- Test code injection, command injection
+- Test format string, SSRF, LFI/RFI
+- Test HTTP parameter pollution, SSTI
+
+### WSTG-ERRH: Error Handling (2 tests)
+- Test for improper error handling and stack traces
+
+### WSTG-CRYP: Cryptography (4 tests)
+- Test TLS/SSL configuration
+- Test for sensitive data in unencrypted channels
+- Test weak cryptographic algorithms
+
+### WSTG-BUSL: Business Logic (10 tests)
