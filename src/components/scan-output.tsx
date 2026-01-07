@@ -125,3 +125,16 @@ function ToolResultBlock({ item }: { item: OutputItem }) {
           lineHeight: "1.5",
           maxHeight: "160px",
           overflowY: "auto",
+        }}
+      >
+        {typeof parsed === "object"
+          ? JSON.stringify(parsed, null, 2)
+          : String(parsed)}
+      </pre>
+    </div>
+  );
+}
+
+function FindingCard({ finding }: { finding: Finding }) {
+  const color = SEVERITY_COLOR[finding.severity] ?? "#888";
+  const bg = SEVERITY_BG[finding.severity] ?? "transparent";
