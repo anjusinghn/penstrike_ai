@@ -127,3 +127,16 @@ export default function Home() {
                 ]);
               } else if (prefix === "a") {
                 const tr = JSON.parse(rest) as {
+                  toolCallId: string;
+                  result: unknown;
+                };
+                const toolName = toolCallNames[tr.toolCallId] ?? "unknown";
+                currentTextId = null;
+                setItems((prev) => [
+                  ...prev,
+                  {
+                    id: uid(),
+                    type: "tool_result",
+                    label: toolName,
+                    content: JSON.stringify(tr.result, null, 2),
+                  },

@@ -125,3 +125,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
                 textTransform: "none",
                 letterSpacing: 0,
                 fontSize: "10px",
+              }}
+            >
+              optional
+            </span>
+          </label>
+          <textarea
+            id="scope"
+            value={scope}
+            onChange={(e) => setScope(e.target.value)}
+            placeholder={
+              "Leave blank to use target URL as scope...\n\nExamples:\n  - All subdomains of example.com\n  - Only /api/* endpoints\n  - Exclude /admin/*"
+            }
+            disabled={isRunning}
