@@ -138,3 +138,16 @@ function ToolResultBlock({ item }: { item: OutputItem }) {
 function FindingCard({ finding }: { finding: Finding }) {
   const color = SEVERITY_COLOR[finding.severity] ?? "#888";
   const bg = SEVERITY_BG[finding.severity] ?? "transparent";
+
+  return (
+    <div
+      style={{
+        backgroundColor: bg,
+        border: `1px solid ${color}22`,
+        borderRadius: "4px",
+        padding: "12px",
+        fontFamily: "var(--font-jetbrains), monospace",
+      }}
+    >
+      <div
+        style={{
