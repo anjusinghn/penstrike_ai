@@ -139,3 +139,16 @@ function FindingCard({ finding }: { finding: Finding }) {
 
   return (
     <div
+      style={{
+        backgroundColor: bg,
+        border: `1px solid ${color}22`,
+        borderRadius: "4px",
+        padding: "12px",
+        fontFamily: "var(--font-jetbrains), monospace",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
