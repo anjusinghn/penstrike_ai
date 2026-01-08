@@ -132,3 +132,15 @@ export function createTools(scope: string) {
         cwe_id: z.string().optional().describe("CWE ID (e.g., CWE-79)"),
       }),
       execute: async (finding) => {
+        console.log(
+          `[FINDING] ${finding.severity.toUpperCase()}: ${finding.title}`,
+        );
+        return {
+          status: "reported",
+          id: `VULN-${Date.now().toString(36).toUpperCase()}`,
+          ...finding,
+        };
+      },
+    }),
+  };
+}
