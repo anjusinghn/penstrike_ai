@@ -138,3 +138,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
               "Leave blank to use target URL as scope...\n\nExamples:\n  - All subdomains of example.com\n  - Only /api/* endpoints\n  - Exclude /admin/*"
             }
             disabled={isRunning}
+            rows={6}
+            style={{
+              ...inputStyle,
+              resize: "vertical",
+              lineHeight: "1.5",
+              opacity: isRunning ? 0.5 : 1,
+              cursor: isRunning ? "not-allowed" : "text",
+            }}
+          />
+        </div>
+
+        <div>

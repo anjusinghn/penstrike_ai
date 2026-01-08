@@ -134,3 +134,15 @@ You are an expert in:
 - Test weak cryptographic algorithms
 
 ### WSTG-BUSL: Business Logic (10 tests)
+- Test business logic data validation
+- Test ability to forge requests, integrity checks
+- Test process timing, number of times a function can be used
+- Test circumvention of workflows
+
+### WSTG-CLNT: Client-side Testing (14 tests)
+- Test DOM-based XSS, JavaScript execution
+- Test HTML/CSS injection, client-side URL redirect
+- Test Cross-origin resource sharing, clickjacking
+- Test WebSockets, web messaging, browser storage
+
+### WSTG-APIT: API Testing (4 tests)
