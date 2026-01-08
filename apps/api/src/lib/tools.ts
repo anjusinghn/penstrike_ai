@@ -117,3 +117,15 @@ export function createTools(scope: string) {
           .describe(
             "Proof — HTTP request/response, tool output, or payload used",
           ),
+        reproduction_steps: z
+          .string()
+          .describe("Step-by-step instructions to reproduce"),
+        remediation: z.string().describe("Recommended fix"),
+        cvss_score: z
+          .number()
+          .optional()
+          .describe("CVSS 3.1 score if applicable"),
+        cwe_id: z.string().optional().describe("CWE ID (e.g., CWE-79)"),
+      }),
+      execute: async (finding) => {
+        console.log(
