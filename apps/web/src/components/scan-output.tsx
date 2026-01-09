@@ -152,3 +152,15 @@ function FindingCard({ finding }: { finding: Finding }) {
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "space-between",
+          gap: "8px",
+          marginBottom: "6px",
+        }}
+      >
+        <span
+          style={{
+            color: "var(--fg)",
+            fontSize: "13px",
+            fontWeight: 600,
+            lineHeight: "1.3",
+          }}
+        >
