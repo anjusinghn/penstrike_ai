@@ -151,3 +151,15 @@ function FindingCard({ finding }: { finding: Finding }) {
     >
       <div
         style={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+          gap: "8px",
+          marginBottom: "6px",
+        }}
+      >
+        <span
+          style={{
+            color: "var(--fg)",
+            fontSize: "13px",
+            fontWeight: 600,
