@@ -139,3 +139,16 @@ export default function Home() {
                   {
                     id: uid(),
                     type: "tool_result",
+                    label: toolName,
+                    content: JSON.stringify(tr.result, null, 2),
+                  },
+                ]);
+                if (toolName === "report_vulnerability") {
+                  const result = tr.result as Finding;
+                  if (result?.title) setFindings((prev) => [...prev, result]);
+                }
+              } else if (prefix === "3") {
+                const errMsg: string = JSON.parse(rest);
+                currentTextId = null;
+                setItems((prev) => [
+                  ...prev,
