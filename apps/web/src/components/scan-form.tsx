@@ -150,3 +150,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
         </div>
 
         <div>
+          <label style={labelStyle} htmlFor="agent">
+            Agent Type
+          </label>
+          <div style={{ position: "relative" }}>
+            <select
+              id="agent"
+              value={agent}
+              onChange={(e) => setAgent(e.target.value as Agent)}
+              disabled={isRunning}
+              style={{
+                ...inputStyle,
+                paddingRight: "32px",
+                appearance: "none",
