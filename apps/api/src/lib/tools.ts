@@ -129,3 +129,14 @@ export function createTools(scope: string) {
       }),
       execute: async (finding) => {
         console.log(
+          `[FINDING] ${finding.severity.toUpperCase()}: ${finding.title}`,
+        );
+        return {
+          status: "reported",
+          id: `VULN-${Date.now().toString(36).toUpperCase()}`,
+          ...finding,
+        };
+      },
+    }),
+  };
+}
