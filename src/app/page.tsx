@@ -165,3 +165,16 @@ export default function Home() {
         setItems((prev) => [
           ...prev,
           { id: uid(), type: "error", content: msg },
+        ]);
+      } finally {
+        setIsRunning(false);
+      }
+    },
+    [],
+  );
+
+  return (
+    <div
+      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+    >
+      <header
