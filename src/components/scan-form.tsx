@@ -144,3 +144,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
             style={{
               ...inputStyle,
               resize: "vertical",
+              lineHeight: "1.5",
+              opacity: disabled ? 0.5 : 1,
+              cursor: disabled ? "not-allowed" : "text",
+            }}
+          />
+        </div>
+
+        <div>
+          <label style={labelStyle} htmlFor="agent">
+            Agent Type
+          </label>
+          <div style={{ position: "relative" }}>
