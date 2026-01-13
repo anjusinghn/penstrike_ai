@@ -152,3 +152,16 @@ export default function Home() {
                 currentTextId = null;
                 setItems((prev) => [
                   ...prev,
+                  { id: uid(), type: "error", content: errMsg },
+                ]);
+              } else if (prefix === "e" || prefix === "d") {
+                currentTextId = null;
+              }
+            } catch {}
+          }
+        }
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : "Unknown error";
+        setItems((prev) => [
+          ...prev,
+          { id: uid(), type: "error", content: msg },

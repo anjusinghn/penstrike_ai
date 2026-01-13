@@ -164,3 +164,16 @@ function FindingCard({ finding }: { finding: Finding }) {
             lineHeight: "1.3",
           }}
         >
+          {finding.title}
+        </span>
+        <span
+          style={{
+            color,
+            backgroundColor: `${color}18`,
+            border: `1px solid ${color}40`,
+            borderRadius: "3px",
+            fontSize: "9px",
+            fontWeight: 700,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            padding: "2px 7px",
