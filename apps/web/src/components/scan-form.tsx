@@ -163,3 +163,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
                 ...inputStyle,
                 paddingRight: "32px",
                 appearance: "none",
+                WebkitAppearance: "none",
+                cursor: isRunning ? "not-allowed" : "pointer",
+                opacity: isRunning ? 0.5 : 1,
+              }}
+            >
+              <option value="cyberstrike">cyberstrike</option>
+              <option value="web-application">web-application</option>
+            </select>
+            <span
+              style={{
+                position: "absolute",
+                right: "10px",
+                top: "50%",
