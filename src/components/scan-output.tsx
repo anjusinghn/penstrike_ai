@@ -176,3 +176,16 @@ function FindingCard({ finding }: { finding: Finding }) {
             borderRadius: "3px",
             fontSize: "9px",
             fontWeight: 700,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            padding: "2px 7px",
+            whiteSpace: "nowrap",
+            flexShrink: 0,
+          }}
+        >
+          {finding.severity}
+        </span>
+      </div>
+
+      <div
+        style={{
