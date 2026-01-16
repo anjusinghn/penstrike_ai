@@ -168,3 +168,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
                 WebkitAppearance: "none",
                 cursor: disabled ? "not-allowed" : "pointer",
                 opacity: disabled ? 0.5 : 1,
+              }}
+            >
+              <option value="cyberstrike">cyberstrike</option>
+              <option value="web-application">web-application</option>
+            </select>
+            <span
+              style={{
+                position: "absolute",
+                right: "10px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                color: "var(--muted)",

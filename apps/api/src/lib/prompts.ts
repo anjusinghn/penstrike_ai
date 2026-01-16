@@ -170,3 +170,16 @@ For each endpoint/parameter discovered:
 - 1' AND SLEEP(5)--
 - ' OR 1=1#
 
+### Command Injection
+- ; id
+- | whoami
+- \`id\`
+- $(whoami)
+
+### SSRF Detection
+- http://127.0.0.1
+- http://169.254.169.254/latest/meta-data/
+- http://[::1]
+
+### Path Traversal
+- ../../../etc/passwd
