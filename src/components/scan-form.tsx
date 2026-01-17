@@ -180,3 +180,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
                 top: "50%",
                 transform: "translateY(-50%)",
                 color: "var(--muted)",
+                pointerEvents: "none",
+                fontSize: "10px",
+              }}
+            >
+              ▾
+            </span>
+          </div>
+          <p
+            style={{
+              marginTop: "5px",
+              fontFamily: "var(--font-jetbrains), monospace",
+              color: "var(--muted)",
