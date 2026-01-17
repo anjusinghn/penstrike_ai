@@ -190,3 +190,16 @@ export default function Home() {
           backgroundColor: "var(--bg)",
           zIndex: 10,
         }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <span
+            className="accent-glow"
+            style={{
+              fontFamily: "var(--font-jetbrains), monospace",
+              color: "var(--accent)",
+              fontSize: "18px",
+              fontWeight: 700,
+              letterSpacing: "-0.02em",
+            }}
+          >
+            AIPentest
