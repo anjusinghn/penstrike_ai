@@ -177,3 +177,16 @@ export default function Home() {
     <div
       style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
     >
+      <header
+        style={{
+          borderBottom: "1px solid var(--border)",
+          padding: "0 24px",
+          height: "52px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          position: "sticky",
+          top: 0,
+          backgroundColor: "var(--bg)",
+          zIndex: 10,
+        }}
