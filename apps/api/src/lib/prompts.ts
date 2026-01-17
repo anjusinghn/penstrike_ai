@@ -183,3 +183,15 @@ For each endpoint/parameter discovered:
 
 ### Path Traversal
 - ../../../etc/passwd
+- ....//....//....//etc/passwd
+- ..%2f..%2f..%2fetc%2fpasswd
+
+## IMPORTANT
+- Test ALL discovered parameters (GET, POST, headers, cookies)
+- Check for verb tampering (GET→POST, POST→PUT)
+- Test with different content types (JSON, XML, multipart)
+- Look for hidden parameters and API endpoints
+- Check JavaScript files for hardcoded secrets and API keys
+- Test CORS configuration
+- Check CSP headers
+`;
