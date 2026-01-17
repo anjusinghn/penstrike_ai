@@ -190,3 +190,16 @@ function FindingCard({ finding }: { finding: Finding }) {
           color: "var(--muted)",
           fontSize: "10px",
           marginBottom: "4px",
+          letterSpacing: "0.04em",
+        }}
+      >
+        {finding.category}
+      </div>
+      <div
+        style={{
+          color: "#555",
+          fontSize: "11px",
+          wordBreak: "break-all",
+          marginBottom: "4px",
+        }}
+      >
