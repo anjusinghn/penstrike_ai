@@ -188,3 +188,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
           <p
             style={{
               marginTop: "5px",
+              fontFamily: "var(--font-jetbrains), monospace",
+              color: "var(--muted)",
+              fontSize: "10px",
+              lineHeight: "1.4",
+            }}
+          >
+            {agent === "cyberstrike"
+              ? "Full-spectrum: recon, enumeration, exploitation"
+              : "Web-focused: OWASP Top 10, API, auth testing"}
+          </p>
+        </div>
+
+        <button
