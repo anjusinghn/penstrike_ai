@@ -201,3 +201,16 @@ export default function ScanForm({ onScan, isRunning }: Props) {
         </div>
 
         <button
+          type="submit"
+          disabled={!target.trim() || isRunning}
+          style={{
+            backgroundColor: isRunning ? "transparent" : "var(--accent)",
+            color: isRunning ? "var(--accent)" : "#000",
+            border: "1px solid var(--accent)",
+            borderRadius: "4px",
+            fontFamily: "var(--font-jetbrains), monospace",
+            fontSize: "12px",
+            fontWeight: 700,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            padding: "10px 0",
