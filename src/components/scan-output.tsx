@@ -214,3 +214,16 @@ function FindingCard({ finding }: { finding: Finding }) {
           style={{
             display: "flex",
             gap: "12px",
+            marginTop: "6px",
+            fontSize: "10px",
+            color: "var(--muted)",
+          }}
+        >
+          {finding.cvss_score !== undefined && (
+            <span>CVSS {finding.cvss_score.toFixed(1)}</span>
+          )}
+          {finding.cwe_id && <span>{finding.cwe_id}</span>}
+        </div>
+      )}
+
+      <details style={{ marginTop: "8px" }}>
