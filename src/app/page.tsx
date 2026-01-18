@@ -204,3 +204,16 @@ export default function Home() {
           >
             AIPentest
           </span>
+          <span
+            style={{
+              fontFamily: "var(--font-jetbrains), monospace",
+              color: "var(--muted)",
+              fontSize: "11px",
+              backgroundColor: "var(--surface)",
+              border: "1px solid var(--border)",
+              borderRadius: "3px",
+              padding: "1px 6px",
+            }}
+          >
+            v0.1
+          </span>
