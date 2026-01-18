@@ -196,3 +196,15 @@ For each endpoint/parameter discovered:
 - Check CSP headers
 `;
 
+export const WSTG_SKILLS = `## WSTG Skill Knowledge — Quick Reference
+
+### Reconnaissance Checklist
+- [ ] HTTP headers analysis (Server, X-Powered-By, X-AspNet-Version)
+- [ ] robots.txt and sitemap.xml review
+- [ ] DNS enumeration (A, AAAA, MX, NS, TXT, CNAME records)
+- [ ] SSL/TLS certificate inspection (SANs, issuer, expiry)
+- [ ] Technology stack fingerprinting
+- [ ] Directory and file enumeration
+- [ ] JavaScript file analysis for endpoints and secrets
+- [ ] Error page analysis (custom vs default)
+- [ ] HTTP method enumeration (OPTIONS, PUT, DELETE, TRACE)
