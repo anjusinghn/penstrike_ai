@@ -202,3 +202,15 @@ function FindingCard({ finding }: { finding: Finding }) {
         style={{
           color: "#555",
           fontSize: "11px",
+          wordBreak: "break-all",
+          marginBottom: "4px",
+        }}
+      >
+        {finding.affected_url}
+      </div>
+
+      {(finding.cvss_score !== undefined || finding.cwe_id) && (
+        <div
+          style={{
+            display: "flex",
+            gap: "12px",
