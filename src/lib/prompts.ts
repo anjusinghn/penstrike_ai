@@ -208,3 +208,15 @@ export const WSTG_SKILLS = `## WSTG Skill Knowledge — Quick Reference
 - [ ] JavaScript file analysis for endpoints and secrets
 - [ ] Error page analysis (custom vs default)
 - [ ] HTTP method enumeration (OPTIONS, PUT, DELETE, TRACE)
+- [ ] Virtual host discovery
+
+### Authentication & Session Checklist
+- [ ] Default credential testing
+- [ ] Brute force protection (lockout after N attempts?)
+- [ ] Password policy testing (min length, complexity)
+- [ ] Session token entropy analysis
+- [ ] Cookie security flags (Secure, HttpOnly, SameSite)
+- [ ] Session fixation testing
+- [ ] CSRF token validation
+- [ ] Logout invalidation testing
+- [ ] Remember-me token security
