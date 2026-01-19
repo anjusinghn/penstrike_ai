@@ -216,3 +216,16 @@ export default function Home() {
             }}
           >
             v0.1
+          </span>
+        </div>
+
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          {scanId && (
+            <span
+              style={{
+                fontFamily: "var(--font-jetbrains), monospace",
+                color: "var(--muted)",
+                fontSize: "11px",
+              }}
+            >
+              {scanId}
