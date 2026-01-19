@@ -228,3 +228,16 @@ function FindingCard({ finding }: { finding: Finding }) {
           style={{
             color: "var(--muted)",
             fontSize: "10px",
+            cursor: "pointer",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            userSelect: "none",
+          }}
+        >
+          Details
+        </summary>
+        <div
+          style={{
+            marginTop: "8px",
+            display: "flex",
+            flexDirection: "column",
