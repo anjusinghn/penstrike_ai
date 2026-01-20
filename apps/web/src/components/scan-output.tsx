@@ -241,3 +241,16 @@ function FindingCard({ finding }: { finding: Finding }) {
             marginTop: "8px",
             display: "flex",
             flexDirection: "column",
+            gap: "8px",
+          }}
+        >
+          {[
+            { label: "Description", value: finding.description },
+            { label: "Remediation", value: finding.remediation },
+          ].map(({ label, value }) => (
+            <div key={label}>
+              <div
+                style={{
+                  color: "var(--muted)",
+                  fontSize: "10px",
+                  textTransform: "uppercase",

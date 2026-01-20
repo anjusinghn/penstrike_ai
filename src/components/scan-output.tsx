@@ -240,3 +240,15 @@ function FindingCard({ finding }: { finding: Finding }) {
           Details
         </summary>
         <div
+          style={{
+            marginTop: "8px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "8px",
+          }}
+        >
+          <div>
+            <div
+              style={{
+                color: "var(--muted)",
+                fontSize: "10px",
