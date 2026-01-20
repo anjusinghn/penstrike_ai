@@ -229,3 +229,15 @@ export default function Home() {
               }}
             >
               {scanId}
+            </span>
+          )}
+          {isRunning && (
+            <span
+              style={{
+                fontFamily: "var(--font-jetbrains), monospace",
+                color: "var(--accent)",
+                fontSize: "11px",
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+              }}
