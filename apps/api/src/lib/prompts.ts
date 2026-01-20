@@ -220,3 +220,15 @@ export const WSTG_SKILLS = `## WSTG Skill Knowledge — Quick Reference
 - [ ] CSRF token validation
 - [ ] Logout invalidation testing
 - [ ] Remember-me token security
+- [ ] Multi-factor bypass attempts
+
+### Injection Testing Checklist
+- [ ] Reflected XSS on all input fields
+- [ ] Stored XSS in persistent data fields
+- [ ] SQL injection (error-based, blind, time-based)
+- [ ] NoSQL injection (MongoDB operators)
+- [ ] Command injection (semicolon, pipe, backtick)
+- [ ] SSTI (template syntax: {{7*7}}, \${7*7}, <%= 7*7 %>)
+- [ ] SSRF (internal IP, cloud metadata)
+- [ ] XXE (if XML parsing detected)
+- [ ] LDAP injection (if LDAP backend suspected)
