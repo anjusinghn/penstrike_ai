@@ -242,3 +242,16 @@ export default function Home() {
                 gap: "6px",
               }}
             >
+              <span
+                style={{
+                  width: "6px",
+                  height: "6px",
+                  borderRadius: "50%",
+                  backgroundColor: "var(--accent)",
+                  display: "inline-block",
+                  animation: "pulse-accent 1.5s ease-in-out infinite",
+                }}
+              />
+              SCANNING
+            </span>
+          )}
