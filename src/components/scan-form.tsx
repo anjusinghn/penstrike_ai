@@ -216,3 +216,15 @@ export default function ScanForm({ onScan, isRunning }: Props) {
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             padding: "10px 0",
+            width: "100%",
+            cursor: !target.trim() || isRunning ? "not-allowed" : "pointer",
+            opacity: !target.trim() ? 0.35 : 1,
+            transition: "all 0.15s",
+          }}
+        >
+          {isRunning ? "Scanning..." : "Launch Scan"}
+        </button>
+      </div>
+    </form>
+  );
+}
