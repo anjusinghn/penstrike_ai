@@ -245,3 +245,15 @@ export const WSTG_SKILLS = `## WSTG Skill Knowledge — Quick Reference
 - [ ] WebSocket security
 - [ ] API versioning bypass
 - [ ] JWT validation (none algorithm, weak secret, expiry)
+`;
+
+export function buildSystemPrompt(
+  agentType: "cyberstrike" | "web-application",
+): string {
+  const base =
+    agentType === "web-application"
+      ? WEB_APPLICATION_PROMPT
+      : CYBERSTRIKE_SYSTEM_PROMPT;
+
+  return `${base}\n\n${WSTG_SKILLS}`;
+}
