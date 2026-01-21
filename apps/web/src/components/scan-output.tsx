@@ -254,3 +254,16 @@ function FindingCard({ finding }: { finding: Finding }) {
                   color: "var(--muted)",
                   fontSize: "10px",
                   textTransform: "uppercase",
+                  letterSpacing: "0.08em",
+                  marginBottom: "3px",
+                }}
+              >
+                {label}
+              </div>
+              <p
+                style={{
+                  color: "#aaa",
+                  fontSize: "11px",
+                  margin: 0,
+                  lineHeight: "1.5",
+                }}
