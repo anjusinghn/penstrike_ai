@@ -233,3 +233,15 @@ export const WSTG_SKILLS = `## WSTG Skill Knowledge — Quick Reference
 - [ ] XXE (if XML parsing detected)
 - [ ] LDAP injection (if LDAP backend suspected)
 - [ ] Header injection (CRLF, Host header)
+
+### Business Logic & API Checklist
+- [ ] IDOR on all object references (IDs, filenames, UUIDs)
+- [ ] Horizontal privilege escalation
+- [ ] Vertical privilege escalation
+- [ ] Race conditions on critical operations
+- [ ] Rate limiting on sensitive endpoints
+- [ ] Mass assignment (extra fields in JSON body)
+- [ ] GraphQL introspection and injection
+- [ ] WebSocket security
+- [ ] API versioning bypass
+- [ ] JWT validation (none algorithm, weak secret, expiry)
