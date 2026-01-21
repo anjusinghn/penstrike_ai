@@ -255,3 +255,16 @@ export default function Home() {
               SCANNING
             </span>
           )}
+          {findings.length > 0 && (
+            <span
+              style={{
+                fontFamily: "var(--font-jetbrains), monospace",
+                color: "#ff8c00",
+                fontSize: "11px",
+                backgroundColor: "rgba(255, 140, 0, 0.08)",
+                border: "1px solid rgba(255, 140, 0, 0.2)",
+                borderRadius: "3px",
+                padding: "1px 8px",
+              }}
+            >
+              {findings.length} {findings.length === 1 ? "FINDING" : "FINDINGS"}
