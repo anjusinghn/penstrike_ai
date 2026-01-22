@@ -267,3 +267,15 @@ function FindingCard({ finding }: { finding: Finding }) {
                   margin: 0,
                   lineHeight: "1.5",
                 }}
+              >
+                {value}
+              </p>
+            </div>
+          ))}
+        </div>
+      </details>
+    </div>
+  );
+}
+
+export default function ScanOutput({ items, findings, isRunning }: Props) {
