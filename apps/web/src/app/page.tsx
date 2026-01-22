@@ -280,3 +280,15 @@ export default function Home() {
           gap: "16px",
           padding: "20px 24px",
           minHeight: 0,
+        }}
+      >
+        <aside style={{ width: "300px", flexShrink: 0 }}>
+          <ScanForm onScan={startScan} isRunning={isRunning} />
+        </aside>
+        <section style={{ flex: 1, minWidth: 0 }}>
+          <ScanOutput items={items} findings={findings} isRunning={isRunning} />
+        </section>
+      </main>
+    </div>
+  );
+}
