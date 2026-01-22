@@ -267,3 +267,16 @@ export default function Home() {
                 padding: "1px 8px",
               }}
             >
+              {findings.length} {findings.length === 1 ? "FINDING" : "FINDINGS"}
+            </span>
+          )}
+        </div>
+      </header>
+
+      <main
+        style={{
+          flex: 1,
+          display: "flex",
+          gap: "16px",
+          padding: "20px 24px",
+          minHeight: 0,
