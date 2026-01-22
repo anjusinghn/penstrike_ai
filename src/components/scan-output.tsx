@@ -278,3 +278,15 @@ function FindingCard({ finding }: { finding: Finding }) {
                 textTransform: "uppercase",
                 letterSpacing: "0.08em",
                 marginBottom: "3px",
+              }}
+            >
+              Remediation
+            </div>
+            <p
+              style={{
+                color: "#aaa",
+                fontSize: "11px",
+                margin: 0,
+                lineHeight: "1.5",
+              }}
+            >
