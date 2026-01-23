@@ -290,3 +290,16 @@ function FindingCard({ finding }: { finding: Finding }) {
                 lineHeight: "1.5",
               }}
             >
+              {finding.remediation}
+            </p>
+          </div>
+        </div>
+      </details>
+    </div>
+  );
+}
+
+export default function ScanOutput({ items, findings, isRunning }: Props) {
+  const termRef = useRef<HTMLDivElement>(null);
+  const hasContent = items.length > 0;
+
