@@ -316,3 +316,15 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
         flexDirection: "column",
         gap: "16px",
         height: "100%",
+      }}
+    >
+      <div
+        ref={termRef}
+        style={{
+          backgroundColor: "var(--surface)",
+          border: `1px solid ${isRunning ? "rgba(0,255,65,0.25)" : "var(--border)"}`,
+          borderRadius: "6px",
+          padding: "16px",
+          fontFamily: "var(--font-jetbrains), monospace",
+          overflowY: "auto",
+          minHeight: "420px",
