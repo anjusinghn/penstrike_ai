@@ -303,3 +303,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
   const termRef = useRef<HTMLDivElement>(null);
   const hasContent = items.length > 0;
 
+  useEffect(() => {
+    if (termRef.current && items.length > 0) {
+      termRef.current.scrollTop = termRef.current.scrollHeight;
+    }
+  }, [items]);
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "16px",
+        height: "100%",
