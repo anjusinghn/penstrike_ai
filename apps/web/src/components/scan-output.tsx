@@ -318,3 +318,15 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
               flexDirection: "column",
               gap: "6px",
               paddingTop: "8px",
+            }}
+          >
+            <div
+              style={{
+                color: "var(--accent)",
+                fontSize: "10px",
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                marginBottom: "12px",
+              }}
+            >
+              Terminal Ready
