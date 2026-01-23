@@ -356,3 +356,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
             ))}
           </div>
         )}
+
+        {isRunning && !hasContent && (
+          <span
+            className="terminal-cursor"
+            style={{ color: "var(--accent)", fontSize: "13px" }}
+          >
+            Initializing
+          </span>
+        )}
+
+        {items.map((item, idx) => {
+          const isLast = idx === items.length - 1;
+
