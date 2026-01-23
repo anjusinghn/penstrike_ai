@@ -330,3 +330,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
               }}
             >
               Terminal Ready
+            </div>
+            {[
+              "Configure a target and launch a scan.",
+              "",
+              "The AI agent will autonomously:",
+              "  - Enumerate the attack surface",
+              "  - Test for OWASP Top 10 vulnerabilities",
+              "  - Execute security tools (nmap, nuclei, etc.)",
+              "  - Report findings with evidence and PoC",
+              "",
+              "All findings appear in the panel below.",
+            ].map((text, i) => (
+              <div
