@@ -328,3 +328,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
           fontFamily: "var(--font-jetbrains), monospace",
           overflowY: "auto",
           minHeight: "420px",
+          maxHeight: "calc(100vh - 240px)",
+          transition: "border-color 0.3s",
+        }}
+      >
+        {!hasContent && !isRunning && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "6px",
+              paddingTop: "8px",
+            }}
+          >
