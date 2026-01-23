@@ -354,3 +354,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
             </div>
             {(
               [
+                { key: "l0", text: "Configure a target and launch a scan." },
+                { key: "l1", text: "" },
+                { key: "l2", text: "The AI agent will autonomously:" },
+                { key: "l3", text: "  - Enumerate the attack surface" },
+                {
+                  key: "l4",
+                  text: "  - Test for OWASP Top 10 vulnerabilities",
+                },
+                {
+                  key: "l5",
+                  text: "  - Execute security tools (nmap, nuclei, etc.)",
+                },
+                {
