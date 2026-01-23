@@ -369,3 +369,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
         {items.map((item, idx) => {
           const isLast = idx === items.length - 1;
 
+          if (item.type === "text") {
+            return (
+              <pre
+                key={item.id}
+                style={{
+                  color: "var(--fg)",
+                  fontSize: "13px",
+                  whiteSpace: "pre-wrap",
+                  wordBreak: "break-word",
+                  margin: 0,
+                  lineHeight: "1.65",
+                  fontFamily: "var(--font-jetbrains), monospace",
+                }}
