@@ -405,3 +405,15 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
             return (
               <pre
                 key={item.id}
+                style={{
+                  color: "var(--fg)",
+                  fontSize: "13px",
+                  whiteSpace: "pre-wrap",
+                  wordBreak: "break-word",
+                  margin: 0,
+                  lineHeight: "1.65",
+                  fontFamily: "var(--font-jetbrains), monospace",
+                }}
+              >
+                {item.content}
+                {isRunning && isLast && <span className="terminal-cursor" />}
