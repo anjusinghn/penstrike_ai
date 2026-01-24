@@ -407,3 +407,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
                   backgroundColor: "rgba(255,59,59,0.07)",
                   border: "1px solid rgba(255,59,59,0.2)",
                   borderRadius: "3px",
+                }}
+              >
+                [ERROR] {item.content}
+              </div>
+            );
+          }
+
+          return null;
+        })}
+      </div>
+
+      {findings.length > 0 && (
+        <div
