@@ -379,3 +379,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
                 style={{
                   color: text === "" ? "transparent" : "var(--muted)",
                   fontSize: "12px",
+                  lineHeight: "1.6",
+                  height: text === "" ? "8px" : "auto",
+                }}
+              >
+                {text || "\u00a0"}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {isRunning && !hasContent && (
+          <span
+            className="terminal-cursor"
