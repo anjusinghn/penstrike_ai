@@ -367,3 +367,15 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
                   text: "  - Execute security tools (nmap, nuclei, etc.)",
                 },
                 {
+                  key: "l6",
+                  text: "  - Report findings with evidence and PoC",
+                },
+                { key: "l7", text: "" },
+                { key: "l8", text: "All findings appear in the panel below." },
+              ] as { key: string; text: string }[]
+            ).map(({ key, text }) => (
+              <div
+                key={key}
+                style={{
+                  color: text === "" ? "transparent" : "var(--muted)",
+                  fontSize: "12px",
