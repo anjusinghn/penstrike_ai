@@ -433,3 +433,15 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
               borderBottom: "1px solid var(--border)",
               display: "flex",
               alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-jetbrains), monospace",
+                color: "var(--accent)",
+                fontSize: "10px",
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
