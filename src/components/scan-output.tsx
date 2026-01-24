@@ -417,3 +417,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
               >
                 {item.content}
                 {isRunning && isLast && <span className="terminal-cursor" />}
+              </pre>
+            );
+          }
+
+          if (item.type === "tool_call") {
+            return <ToolCallBlock key={item.id} item={item} />;
+          }
+
+          if (item.type === "tool_result") {
+            return <ToolResultBlock key={item.id} item={item} />;
+          }
+
+          if (item.type === "error") {
