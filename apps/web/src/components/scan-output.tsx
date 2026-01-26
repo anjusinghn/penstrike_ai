@@ -458,3 +458,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
                   return (
                     <span
                       key={sev}
+                      style={{
+                        fontFamily: "var(--font-jetbrains), monospace",
+                        color: SEVERITY_COLOR[sev],
+                        fontSize: "10px",
+                        backgroundColor: SEVERITY_BG[sev],
+                        border: `1px solid ${SEVERITY_COLOR[sev]}33`,
+                        borderRadius: "3px",
+                        padding: "1px 6px",
+                        letterSpacing: "0.04em",
+                      }}
+                    >
+                      {count} {sev}
+                    </span>
