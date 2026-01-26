@@ -455,3 +455,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
 
       {findings.length > 0 && (
         <div
+          style={{
+            backgroundColor: "var(--surface)",
+            border: "1px solid var(--border)",
+            borderRadius: "6px",
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              padding: "10px 16px",
+              borderBottom: "1px solid var(--border)",
+              display: "flex",
+              alignItems: "center",
