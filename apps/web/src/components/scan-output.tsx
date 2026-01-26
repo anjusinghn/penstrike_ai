@@ -471,3 +471,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
                     >
                       {count} {sev}
                     </span>
+                  );
+                },
+              )}
+            </div>
+          </div>
+
+          <div
+            style={{
+              padding: "12px 16px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              maxHeight: "480px",
