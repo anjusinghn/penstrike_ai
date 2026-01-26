@@ -430,3 +430,16 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
           }
 
           if (item.type === "error") {
+            return (
+              <div
+                key={item.id}
+                style={{
+                  color: "#ff3b3b",
+                  fontSize: "12px",
+                  fontFamily: "var(--font-jetbrains), monospace",
+                  margin: "8px 0",
+                  padding: "8px 12px",
+                  backgroundColor: "rgba(255,59,59,0.07)",
+                  border: "1px solid rgba(255,59,59,0.2)",
+                  borderRadius: "3px",
+                }}
