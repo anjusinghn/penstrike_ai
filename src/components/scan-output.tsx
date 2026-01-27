@@ -481,3 +481,15 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
                 fontWeight: 700,
               }}
             >
+              Findings
+            </span>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              {(["critical", "high", "medium", "low", "info"] as const).map(
+                (sev) => {
+                  const count = findings.filter(
+                    (f) => f.severity === sev,
+                  ).length;
+                  if (count === 0) return null;
+                  return (
+                    <span
+                      key={sev}

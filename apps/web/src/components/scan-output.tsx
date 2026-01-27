@@ -484,3 +484,15 @@ export default function ScanOutput({ items, findings, isRunning }: Props) {
               flexDirection: "column",
               gap: "8px",
               maxHeight: "480px",
+              overflowY: "auto",
+            }}
+          >
+            {findings.map((finding, i) => (
+              <FindingCard key={finding.id ?? i} finding={finding} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
